@@ -28,11 +28,9 @@ public class ConsumidorImpl implements ConsumidorService {
     @Autowired
     PreComunidadeRepository pre;
 
-
     public List<ConsumidorDTO> listarConsumidor() {
         List<ConsumidorDTO> listConsdto = new ArrayList<>();
         cons.findAll().forEach(consumidor -> {
-
             ConsumidorDTO builderDto = ConsumidorDTO.builder()
                     .nome(consumidor.getNome())
                     .cpf(consumidor.getCpf())
@@ -40,7 +38,6 @@ public class ConsumidorImpl implements ConsumidorService {
                     .sobrenome(consumidor.getSobrenome())
                     .precomunidade(consumidor.getPrecomunidade().getId())
                     .build();
-
             listConsdto.add(builderDto);
         });
         return listConsdto;
@@ -58,7 +55,6 @@ public class ConsumidorImpl implements ConsumidorService {
             }
 
             String senha = con.getSenha();
-
             String sha256hex = Hashing.sha256().hashString(senha, StandardCharsets.UTF_8).toString();
 
             Consumidor consumidor = Consumidor.builder()
@@ -78,7 +74,6 @@ public class ConsumidorImpl implements ConsumidorService {
         }
     }
 
-
     @Override
     public ResponseEntity<String> editaConsumidor(ConsumidorDTO consumidor) {
         if(cons.existsById(consumidor.getCpf())) {
@@ -86,10 +81,8 @@ public class ConsumidorImpl implements ConsumidorService {
             if (!oppre.isPresent()) {
                 return ResponseEntity.status(HttpStatus.OK).body("Pre Comunidade Não Encontrada!");
             }
-
             String senha = consumidor.getSenha();
             if(senha == "" || senha == null) {
-
                 Consumidor con = Consumidor.builder()
                         .cpf(consumidor.getCpf())
                         .nome(consumidor.getNome())
@@ -97,11 +90,9 @@ public class ConsumidorImpl implements ConsumidorService {
                         .sobrenome(consumidor.getSobrenome())
                         .precomunidade(oppre.get())
                         .build();
-
                 cons.save(con);
             }
             else{
-
                 String sha256hex = Hashing.sha256().hashString(senha, StandardCharsets.UTF_8).toString();
                 Consumidor con = Consumidor.builder()
                         .cpf(consumidor.getCpf())
@@ -132,7 +123,4 @@ public class ConsumidorImpl implements ConsumidorService {
 			//return ResponseEntity.badRequest().body("Deu ruim");
 		
 	}
-
-
-
 }

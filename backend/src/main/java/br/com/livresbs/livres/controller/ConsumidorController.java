@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping(value = "consumidor")
+@RestController // controlador rest
+@RequestMapping(value = "consumidor") //caminho
 public class ConsumidorController {
+
     @Autowired
     private ConsumidorService cons;
 
-    @CrossOrigin
+    @CrossOrigin // quando tenho duas tec conversando em dif servidores... estabele contrato de comunicacao..
     @GetMapping
     public List<ConsumidorDTO> listarConsumidor() {
         return cons.listarConsumidor();
@@ -26,7 +27,6 @@ public class ConsumidorController {
     public Consumidor listaConsumidorUnico(@PathVariable(value = "id") String id) {
         return cons.listaConsumidorUnico(id);
     }
-
 
     @CrossOrigin
     @PutMapping
