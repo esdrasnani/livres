@@ -9,5 +9,6 @@ public interface UsuarioService {
 	
    
     ResponseEntity cadastraUsuario(@RequestBody Usuario obj);
+    
    
 }

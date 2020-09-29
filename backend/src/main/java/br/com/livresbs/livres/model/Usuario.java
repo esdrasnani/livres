@@ -39,6 +39,8 @@ public class Usuario implements Serializable{
     @JsonIgnore
     private String senha;
     
+    
+    
     public String getLogin() { return login; }
     public void setLogin(String login) {  this.login = login;}
     
@@ -46,4 +48,10 @@ public class Usuario implements Serializable{
     public String getSenha() { return senha; }
     @JsonProperty
     public void setSenha(String senha) {this.senha = senha;}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 }
