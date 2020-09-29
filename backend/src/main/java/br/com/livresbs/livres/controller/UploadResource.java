@@ -1,5 +1,6 @@
-package br.com.livresbs.livres.service.impl;
+package br.com.livresbs.livres.controller;
 
+import br.com.livresbs.livres.service.impl.S3ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,10 +12,10 @@ import org.springframework.web.multipart.MultipartFile;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/upload")
+@RequestMapping(value = "upload")
 public class UploadResource {
     @Autowired
-    private S3Service service;
+    private S3ServiceImpl service;
 
     @PostMapping
     public ResponseEntity<Void> uploadFile(

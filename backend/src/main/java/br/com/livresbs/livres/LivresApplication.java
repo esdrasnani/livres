@@ -11,9 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @ComponentScan
 @Configuration
 public class LivresApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(LivresApplication.class, args);
 	}
-
 }

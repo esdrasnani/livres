@@ -4,7 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -21,6 +24,7 @@ import br.com.livresbs.livres.utils.JWTUtil;
 
 @Configuration
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
@@ -31,30 +35,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	
 	private static final String[] PUBLIC_MATCHERS = {
-			"/precomunidade/**",
 			"/usuario/**",
-			"/email/**"
+			"/precomunidade/**",
 			};
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		http.cors().and().csrf().disable();
 		http.authorizeRequests()
-		.antMatchers(HttpMethod.GET, PUBLIC_MATCHERS)
-		.permitAll()
-		.antMatchers(HttpMethod.POST, PUBLIC_MATCHERS)
-		.permitAll()
+		.antMatchers(HttpMethod.GET, PUBLIC_MATCHERS).permitAll()
+		.antMatchers(HttpMethod.POST, PUBLIC_MATCHERS).permitAll()
 		.anyRequest()
 		.authenticated();
-		
-		http.cors().and().csrf()
-		.disable();
-		
-		http.sessionManagement()
-		.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-		
+
+		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
 		http.addFilter(new JWTAuthenticationFilter(authenticationManager(), jwtUtil));
-		
 		http.addFilter(new JWTAuthorizationFilter(authenticationManager(), jwtUtil, userDetailsService));
+
+
 	}
 	
 	@Override
@@ -62,13 +61,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
 	}
 	
-	
 	@Bean
 	CorsConfigurationSource corsConfigurationSource() {
 		final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", new CorsConfiguration().applyPermitDefaultValues());
 		return source;
-		}
+	}
 	
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {

@@ -7,7 +7,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import br.com.livresbs.livres.model.Usuario;
 import br.com.livresbs.livres.repository.UsuarioRepository;
 import br.com.livresbs.livres.service.UserDetailsService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserDetailsServiceImpl implements UserDetailsService{
 
 	@Autowired
