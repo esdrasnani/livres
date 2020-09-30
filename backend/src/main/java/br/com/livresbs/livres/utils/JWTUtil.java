@@ -2,6 +2,10 @@ package br.com.livresbs.livres.utils;
 
 import java.util.Date;
 
+import br.com.livresbs.livres.model.TipoPerfil;
+import br.com.livresbs.livres.model.Usuario;
+import br.com.livresbs.livres.service.impl.UserDetailsImpl;
+import br.com.livresbs.livres.service.impl.UsuarioImpl;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -63,4 +67,15 @@ public class JWTUtil {
             super(message, cause);
         }
     }
+
+    public boolean authorized(Long id) {
+        UserDetailsImpl user =
+                UsuarioImpl.authenticated();
+        if (user == null || (!user.hasRole(TipoPerfil.ADMIN)
+                && !id.equals(user.getId()))) {
+            return false;
+        }
+        return true;
+    }
+
 }

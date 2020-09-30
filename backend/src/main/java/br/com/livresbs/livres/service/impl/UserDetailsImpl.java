@@ -1,8 +1,12 @@
 package br.com.livresbs.livres.service.impl;
 
 import java.util.Collection;
+import java.util.Set;
+import java.util.stream.Collectors;
 
+import br.com.livresbs.livres.model.TipoPerfil;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public class UserDetailsImpl implements UserDetails {
@@ -15,19 +19,22 @@ public class UserDetailsImpl implements UserDetails {
 	private Long id;
 	private String login;
 	private String senha;
-	
+	private Collection<? extends GrantedAuthority> authorities;
+
 	public UserDetailsImpl() { }
 	
-	public UserDetailsImpl(Long id, String login, String senha) {
+	public UserDetailsImpl(Long id, String login, String senha, Set<TipoPerfil> perfis) {
 		super();
 		this.id = id;
 		this.login = login;
 		this.senha = senha;
-
+		this.authorities = perfis.stream().map(x -> new
+				SimpleGrantedAuthority(x.getDescricao()))
+				.collect(Collectors.toList());
 		}
 	
 	public Long getId() { return id; }
-	
+
 	@Override
 	public String getPassword() { return senha; }
 	
@@ -48,7 +55,12 @@ public class UserDetailsImpl implements UserDetails {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
+		return authorities;
+	}
+
+	public boolean hasRole(TipoPerfil perfil) {
+		return getAuthorities()
+				.contains(new SimpleGrantedAuthority(
+						perfil.getDescricao()));
 	}
 }

@@ -1,12 +1,11 @@
 package br.com.livresbs.livres.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -38,10 +37,22 @@ public class Usuario implements Serializable{
     @NotBlank
     @JsonIgnore
     private String senha;
-    
-    
-    
-    public String getLogin() { return login; }
+
+	@ElementCollection(fetch = FetchType.EAGER)
+	@CollectionTable(name = "tb_perfil")
+	private Set<Integer> perfis = new HashSet<>();
+
+	public Set<TipoPerfil> getPerfis() {
+		return perfis.stream()
+				.map(x -> TipoPerfil.toEnum(x))
+				.collect(Collectors.toSet());
+	}
+	public void addPerfil(TipoPerfil perfil) {
+		this.perfis.add(perfil.getCod());
+	}
+
+
+	public String getLogin() { return login; }
     public void setLogin(String login) {  this.login = login;}
     
     @JsonIgnore
