@@ -1,3 +1,4 @@
+import 'package:app_livres/screens/pre_comunidade.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -37,7 +38,6 @@ class Login extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 25.0, right: 25.0, left: 25.0),
                     child: TextField(
-                      obscureText: true,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: const BorderRadius.all(
@@ -68,9 +68,11 @@ class Login extends StatelessWidget {
                         child: FlatButton(
                           child: Text(
                             "Acessar",
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            navigateToSubPage(context);
+                          },
                           color: Color.fromARGB(255, 41, 171, 226),
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                         ),
@@ -84,4 +86,8 @@ class Login extends StatelessWidget {
       ),
     );
   }
+}
+
+Future navigateToSubPage(context) async {
+  Navigator.push(context, MaterialPageRoute(builder: (context) => PreComunidade()));
 }
