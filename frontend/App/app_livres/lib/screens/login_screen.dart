@@ -1,4 +1,4 @@
-import 'package:app_livres/screens/pre_comunidade.dart';
+import 'package:app_livres/screens/home_menu.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -32,11 +32,13 @@ class Login extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 25.0),
                     child: Text(
                       "Bem-Vindo ao Livres",
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 25.0, right: 25.0, left: 25.0),
+                    padding: const EdgeInsets.only(
+                        top: 25.0, right: 25.0, left: 25.0),
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -49,7 +51,8 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0, right: 25.0, left: 25.0),
+                    padding: const EdgeInsets.only(
+                        top: 20.0, right: 25.0, left: 25.0),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
@@ -63,7 +66,8 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                      padding: const EdgeInsets.only(top: 20.0, right: 25.0, left: 25.0),
+                      padding: const EdgeInsets.only(
+                          top: 20.0, right: 25.0, left: 25.0),
                       child: Container(
                         child: FlatButton(
                           child: Text(
@@ -71,10 +75,12 @@ class Login extends StatelessWidget {
                             style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
                           onPressed: () {
-                            navigateToSubPage(context);
+                            //navigateToSubPage(context);
+                            Navigator.of(context).push(_createRoute());
                           },
                           color: Color.fromARGB(255, 41, 171, 226),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
                         ),
                         height: 50,
                       ))
@@ -89,5 +95,23 @@ class Login extends StatelessWidget {
 }
 
 Future navigateToSubPage(context) async {
-  Navigator.push(context, MaterialPageRoute(builder: (context) => PreComunidade()));
+  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeMenu()));
+}
+
+Route _createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => HomeMenu(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(0.0, 1.0);
+      var end = Offset.zero;
+      var curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
 }

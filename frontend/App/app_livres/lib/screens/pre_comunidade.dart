@@ -22,7 +22,6 @@ class _PreComunidade extends State<PreComunidade> {
               foregroundColor: Colors.white,
             ),
             title: Text('Pre-Comunidade 1'),
-            subtitle: Text('Descrição Rápida sobre'),
             trailing: Container(
               width: 100,
               child: Row(
@@ -49,7 +48,6 @@ class _PreComunidade extends State<PreComunidade> {
               foregroundColor: Colors.white,
             ),
             title: Text('Pre-Comunidade 2'),
-            subtitle: Text('Descrição Rápida sobre'),
             trailing: Container(
               width: 100,
               child: Row(
@@ -76,7 +74,6 @@ class _PreComunidade extends State<PreComunidade> {
               foregroundColor: Colors.white,
             ),
             title: Text('Pre-Comunidade 3'),
-            subtitle: Text('Descrição Rápida sobre'),
             trailing: Container(
               width: 100,
               child: Row(
@@ -111,7 +108,8 @@ class _PreComunidade extends State<PreComunidade> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(32.0))),
             contentPadding: EdgeInsets.only(top: 10.0),
             content: Container(
               width: 50.0,
@@ -121,7 +119,8 @@ class _PreComunidade extends State<PreComunidade> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 30.0),
+                    padding:
+                        EdgeInsets.only(left: 30.0, right: 30.0, top: 30.0),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "Nome da Pré-Comunidade",
@@ -136,7 +135,8 @@ class _PreComunidade extends State<PreComunidade> {
                       decoration: BoxDecoration(
                         color: Color.fromARGB(255, 41, 171, 226),
                         borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(32.0), bottomRight: Radius.circular(32.0)),
+                            bottomLeft: Radius.circular(32.0),
+                            bottomRight: Radius.circular(32.0)),
                       ),
                       child: Text(
                         "Adicionar",
