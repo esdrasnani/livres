@@ -19,7 +19,7 @@ public class PreComunidadeController {
 
     @CrossOrigin
     @GetMapping
-    @PreAuthorize("hasAnyRole('ADMIN')")
+    //@PreAuthorize("hasAnyRole('ADMIN')")
     public List<PreComunidade> listaPreComunidades() {
         return pcr.listaPreComunidades();
     }

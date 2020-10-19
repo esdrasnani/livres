@@ -44,5 +44,7 @@ public class Consumidor {
         inverseJoinColumns = @JoinColumn(name = "endereco_id")
     )
     private List<EnderecoEntrega> enderecos;
+
+    
     
 }
