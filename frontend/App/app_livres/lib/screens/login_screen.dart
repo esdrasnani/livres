@@ -32,13 +32,11 @@ class Login extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 25.0),
                     child: Text(
                       "Bem-Vindo ao Livres",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                        top: 25.0, right: 25.0, left: 25.0),
+                    padding: const EdgeInsets.only(top: 25.0, right: 25.0, left: 25.0),
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -51,8 +49,7 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                        top: 20.0, right: 25.0, left: 25.0),
+                    padding: const EdgeInsets.only(top: 20.0, right: 25.0, left: 25.0),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
@@ -66,8 +63,7 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                      padding: const EdgeInsets.only(
-                          top: 20.0, right: 25.0, left: 25.0),
+                      padding: const EdgeInsets.only(top: 20.0, right: 25.0, left: 25.0),
                       child: Container(
                         child: FlatButton(
                           child: Text(
@@ -79,8 +75,7 @@ class Login extends StatelessWidget {
                             Navigator.of(context).push(_createRoute());
                           },
                           color: Color.fromARGB(255, 41, 171, 226),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                         ),
                         height: 50,
                       ))

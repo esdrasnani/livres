@@ -40,20 +40,17 @@ class _HomeMenu extends State<HomeMenu> {
                     Text(
                       "Seja Bem-Vindo ",
                       textAlign: TextAlign.center,
-                      style:
-                          TextStyle(fontWeight: FontWeight.w200, fontSize: 20),
+                      style: TextStyle(fontWeight: FontWeight.w200, fontSize: 20),
                     ),
                     Text(
                       " Usuário",
                       textAlign: TextAlign.center,
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     Text(
                       "!",
                       textAlign: TextAlign.center,
-                      style:
-                          TextStyle(fontWeight: FontWeight.w200, fontSize: 20),
+                      style: TextStyle(fontWeight: FontWeight.w200, fontSize: 20),
                     ),
                   ],
                 ),
@@ -74,17 +71,14 @@ class _HomeMenu extends State<HomeMenu> {
                             color: Colors.white,
                             iconSize: 25,
                             onPressed: () {
-                              Navigator.of(context)
-                                  .push(_createRoute(PreComunidade()));
+                              Navigator.of(context).push(_createRoute(PreComunidade()));
                             },
                           ),
                           Container(
                             child: Text(
                               "Pré-Comunidades",
                               style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold),
                             ),
                           )
                         ],
@@ -101,9 +95,7 @@ class _HomeMenu extends State<HomeMenu> {
                             child: Text(
                               "Usuários",
                               style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold),
                             ),
                           )
                         ],
@@ -111,7 +103,7 @@ class _HomeMenu extends State<HomeMenu> {
                       Column(
                         children: [
                           IconButton(
-                            icon: Icon(Icons.food_bank),
+                            icon: Icon(Icons.person),
                             color: Colors.white,
                             iconSize: 25,
                             onPressed: () {},
@@ -120,9 +112,7 @@ class _HomeMenu extends State<HomeMenu> {
                             child: Text(
                               "Produtores",
                               style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold),
                             ),
                           )
                         ],
@@ -139,9 +129,7 @@ class _HomeMenu extends State<HomeMenu> {
                             child: Text(
                               "Produtos",
                               style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold),
                             ),
                           )
                         ],

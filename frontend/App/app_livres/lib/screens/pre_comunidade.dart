@@ -13,88 +13,7 @@ class _PreComunidade extends State<PreComunidade> {
         backgroundColor: Color.fromARGB(255, 41, 171, 226),
         centerTitle: true,
       ),
-      body: ListView(
-        children: [
-          ListTile(
-            leading: CircleAvatar(
-              child: Icon(Icons.group),
-              backgroundColor: Color.fromARGB(255, 41, 171, 226),
-              foregroundColor: Colors.white,
-            ),
-            title: Text('Pre-Comunidade 1'),
-            trailing: Container(
-              width: 100,
-              child: Row(
-                children: [
-                  IconButton(
-                    icon: Icon(Icons.edit),
-                    color: Colors.orange,
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.delete),
-                    color: Colors.red,
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
-            onTap: () {},
-          ),
-          ListTile(
-            leading: CircleAvatar(
-              child: Icon(Icons.group),
-              backgroundColor: Color.fromARGB(255, 41, 171, 226),
-              foregroundColor: Colors.white,
-            ),
-            title: Text('Pre-Comunidade 2'),
-            trailing: Container(
-              width: 100,
-              child: Row(
-                children: [
-                  IconButton(
-                    icon: Icon(Icons.edit),
-                    color: Colors.orange,
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.delete),
-                    color: Colors.red,
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
-            onTap: () {},
-          ),
-          ListTile(
-            leading: CircleAvatar(
-              child: Icon(Icons.group),
-              backgroundColor: Color.fromARGB(255, 41, 171, 226),
-              foregroundColor: Colors.white,
-            ),
-            title: Text('Pre-Comunidade 3'),
-            trailing: Container(
-              width: 100,
-              child: Row(
-                children: [
-                  IconButton(
-                    icon: Icon(Icons.edit),
-                    color: Colors.orange,
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.delete),
-                    color: Colors.red,
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
-            onTap: () {},
-          ),
-        ],
-      ),
+      body: PreComunidadeList(),
       floatingActionButton: FloatingActionButton(
         onPressed: addPrecomunidade,
         child: Icon(Icons.add),
@@ -108,8 +27,7 @@ class _PreComunidade extends State<PreComunidade> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(32.0))),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
             contentPadding: EdgeInsets.only(top: 10.0),
             content: Container(
               width: 50.0,
@@ -119,8 +37,7 @@ class _PreComunidade extends State<PreComunidade> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Padding(
-                    padding:
-                        EdgeInsets.only(left: 30.0, right: 30.0, top: 30.0),
+                    padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 30.0),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "Nome da Pré-Comunidade",
@@ -135,8 +52,7 @@ class _PreComunidade extends State<PreComunidade> {
                       decoration: BoxDecoration(
                         color: Color.fromARGB(255, 41, 171, 226),
                         borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(32.0),
-                            bottomRight: Radius.circular(32.0)),
+                            bottomLeft: Radius.circular(32.0), bottomRight: Radius.circular(32.0)),
                       ),
                       child: Text(
                         "Adicionar",
@@ -150,5 +66,75 @@ class _PreComunidade extends State<PreComunidade> {
             ),
           );
         });
+  }
+
+  Widget listPreComunidade(nomePreComunidade) {
+    /*return ListTile(
+      leading: CircleAvatar(
+        child: Icon(Icons.group),
+        backgroundColor: Color.fromARGB(255, 41, 171, 226),
+        foregroundColor: Colors.white,
+      ),
+      title: Text(nomePreComunidade),
+      trailing: Container(
+        width: 100,
+        child: Row(
+          children: [
+            IconButton(
+              icon: Icon(Icons.edit),
+              color: Colors.orange,
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.delete),
+              color: Colors.red,
+              onPressed: () {},
+            ),
+          ],
+        ),
+      ),
+      onTap: () {},
+    );*/
+  }
+}
+
+class PreComunidadeList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      scrollDirection: Axis.vertical,
+      shrinkWrap: true,
+      itemCount: 10,
+      itemBuilder: (context, index) {
+        return Card(
+          child: ListTile(
+            leading: CircleAvatar(
+              child: Icon(Icons.group),
+              backgroundColor: Color.fromARGB(255, 41, 171, 226),
+              foregroundColor: Colors.white,
+            ),
+            title: Text('Pré-Comunidade ' + (index + 1).toString()),
+            trailing: Container(
+              width: 100,
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.edit),
+                    color: Colors.orange,
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.delete),
+                    color: Colors.red,
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ),
+            onTap: () {},
+          ),
+        );
+      },
+    );
   }
 }
