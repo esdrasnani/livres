@@ -1,20 +1,21 @@
 package br.com.livresbs.livres.service.impl;
 
-import br.com.livresbs.livres.dto.ProdutoDTO;
-import br.com.livresbs.livres.model.CategoriaProduto;
-import br.com.livresbs.livres.model.Produto;
-import br.com.livresbs.livres.repository.CategoriaRepository;
-import br.com.livresbs.livres.repository.ProdutoRepository;
-import br.com.livresbs.livres.service.ProdutoService;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import br.com.livresbs.livres.dto.ProdutoDTO;
+import br.com.livresbs.livres.model.CategoriaProduto;
+import br.com.livresbs.livres.model.Produto;
+import br.com.livresbs.livres.repository.CategoriaRepository;
+import br.com.livresbs.livres.repository.ProdutoRepository;
+import br.com.livresbs.livres.service.ProdutoService;
 
 @Service
 public class ProdutoServiceImpl implements ProdutoService {

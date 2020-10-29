@@ -1,15 +1,16 @@
 package br.com.livresbs.livres.scheduler;
 
-import br.com.livresbs.livres.model.DataEntrega;
-import br.com.livresbs.livres.model.StatusDataEntrega;
-import br.com.livresbs.livres.repository.DataEntregaRepository;
+import java.time.Clock;
+import java.time.LocalDate;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.time.Clock;
-import java.time.LocalDate;
-import java.util.List;
+import br.com.livresbs.livres.model.DataEntrega;
+import br.com.livresbs.livres.model.StatusDataEntrega;
+import br.com.livresbs.livres.repository.DataEntregaRepository;
 
 @Component
 public class VerificarDatasEntrega {

@@ -1,12 +1,11 @@
 package br.com.livresbs.livres.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.Builder;
 import lombok.Data;
-
-import java.util.List;
-import java.util.Map;
 
 @Data
 @Builder

@@ -1,12 +1,10 @@
 package br.com.livresbs.livres.service.impl;
 
-import br.com.livresbs.livres.dto.ConsumidorDTO;
-import br.com.livresbs.livres.model.Consumidor;
-import br.com.livresbs.livres.model.PreComunidade;
-import br.com.livresbs.livres.repository.ConsumidorRepository;
-import br.com.livresbs.livres.repository.PreComunidadeRepository;
-import br.com.livresbs.livres.service.ConsumidorService;
-import com.google.common.hash.Hashing;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,11 +12,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.nio.charset.StandardCharsets;
+import com.google.common.hash.Hashing;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import br.com.livresbs.livres.dto.ConsumidorDTO;
+import br.com.livresbs.livres.model.Consumidor;
+import br.com.livresbs.livres.model.PreComunidade;
+import br.com.livresbs.livres.repository.ConsumidorRepository;
+import br.com.livresbs.livres.repository.PreComunidadeRepository;
+import br.com.livresbs.livres.service.ConsumidorService;
 
 @Service
 public class ConsumidorImpl implements ConsumidorService {

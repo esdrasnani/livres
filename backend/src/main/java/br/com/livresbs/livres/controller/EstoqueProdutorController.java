@@ -2,7 +2,6 @@ package br.com.livresbs.livres.controller;
 
 import java.util.List;
 
-import br.com.livresbs.livres.dto.EstoqueProdutorDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.livresbs.livres.dto.EstoqueProdutorDTO;
 import br.com.livresbs.livres.model.EstoqueProdutor;
 import br.com.livresbs.livres.service.EstoqueProdutorService;
 

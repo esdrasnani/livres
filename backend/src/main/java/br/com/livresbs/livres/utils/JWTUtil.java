@@ -2,13 +2,12 @@ package br.com.livresbs.livres.utils;
 
 import java.util.Date;
 
-import br.com.livresbs.livres.model.TipoPerfil;
-import br.com.livresbs.livres.model.Usuario;
-import br.com.livresbs.livres.service.impl.UserDetailsImpl;
-import br.com.livresbs.livres.service.impl.UsuarioImpl;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import br.com.livresbs.livres.model.TipoPerfil;
+import br.com.livresbs.livres.service.impl.UserDetailsImpl;
+import br.com.livresbs.livres.service.impl.UsuarioImpl;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

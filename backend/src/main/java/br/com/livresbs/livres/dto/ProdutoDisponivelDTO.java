@@ -1,9 +1,9 @@
 package br.com.livresbs.livres.dto;
 
+import java.math.BigDecimal;
+
 import lombok.Builder;
 import lombok.Data;
-
-import java.math.BigDecimal;
 
 @Data
 @Builder

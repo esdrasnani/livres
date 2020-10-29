@@ -1,11 +1,12 @@
 package br.com.livresbs.livres.service;
 
-import br.com.livresbs.livres.model.PreComunidade;
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.util.List;
+import br.com.livresbs.livres.model.PreComunidade;
 
 public interface PreComunidadeService {
 

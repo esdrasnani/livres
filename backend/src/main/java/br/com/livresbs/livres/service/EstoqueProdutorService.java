@@ -2,10 +2,10 @@ package br.com.livresbs.livres.service;
 
 import java.util.List;
 
-import br.com.livresbs.livres.dto.EstoqueProdutorDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import br.com.livresbs.livres.dto.EstoqueProdutorDTO;
 import br.com.livresbs.livres.model.EstoqueProdutor;
 
 public interface EstoqueProdutorService {

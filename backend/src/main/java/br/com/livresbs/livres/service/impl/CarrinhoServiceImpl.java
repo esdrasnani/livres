@@ -1,24 +1,23 @@
 package br.com.livresbs.livres.service.impl;
 
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import br.com.livresbs.livres.dto.CarrinhoDTO;
 import br.com.livresbs.livres.dto.ProdutoCarrinhoDTO;
 import br.com.livresbs.livres.model.Carrinho;
 import br.com.livresbs.livres.model.Consumidor;
 import br.com.livresbs.livres.model.EstoqueProdutor;
-import br.com.livresbs.livres.model.Produto;
 import br.com.livresbs.livres.repository.CarrinhoRepository;
-
 import br.com.livresbs.livres.repository.ConsumidorRepository;
 import br.com.livresbs.livres.repository.EstoqueProdutorRepository;
 import br.com.livresbs.livres.service.CarrinhoService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CarrinhoServiceImpl implements CarrinhoService {

@@ -3,18 +3,17 @@ package br.com.livresbs.livres.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.livresbs.livres.dto.EstoqueProdutorDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import br.com.livresbs.livres.dto.EstoqueProdutorDTO;
 import br.com.livresbs.livres.model.EstoqueProdutor;
 import br.com.livresbs.livres.repository.EstoqueProdutorRepository;
 import br.com.livresbs.livres.repository.ProdutoRepository;
 import br.com.livresbs.livres.repository.ProdutorRepository;
 import br.com.livresbs.livres.service.EstoqueProdutorService;
-import lombok.var;
 
 @Service
 public class EstoqueProdutorImpl implements EstoqueProdutorService{

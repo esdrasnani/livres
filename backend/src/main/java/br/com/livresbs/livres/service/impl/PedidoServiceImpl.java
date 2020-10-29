@@ -1,24 +1,23 @@
 package br.com.livresbs.livres.service.impl;
 
-import br.com.livresbs.livres.config.properties.MessageProperty;
-import br.com.livresbs.livres.dto.MetodoPagamentoDTO;
-import br.com.livresbs.livres.dto.ProdutoCompradoDTO;
-import br.com.livresbs.livres.dto.CheckoutDTO;
-import br.com.livresbs.livres.exception.CarrinhoVazioException;
-import br.com.livresbs.livres.model.Carrinho;
-import br.com.livresbs.livres.model.MeioPagamento;
-import br.com.livresbs.livres.model.MetodoPagamento;
-import br.com.livresbs.livres.repository.CarrinhoRepository;
-import br.com.livresbs.livres.repository.MetodoPagamentoRepository;
-import br.com.livresbs.livres.service.PedidoService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.livresbs.livres.config.properties.MessageProperty;
+import br.com.livresbs.livres.dto.CheckoutDTO;
+import br.com.livresbs.livres.dto.MetodoPagamentoDTO;
+import br.com.livresbs.livres.dto.ProdutoCompradoDTO;
+import br.com.livresbs.livres.exception.CarrinhoVazioException;
+import br.com.livresbs.livres.model.Carrinho;
+import br.com.livresbs.livres.model.MeioPagamento;
+import br.com.livresbs.livres.repository.CarrinhoRepository;
+import br.com.livresbs.livres.repository.MetodoPagamentoRepository;
+import br.com.livresbs.livres.service.PedidoService;
 
 @Service
 public class PedidoServiceImpl implements PedidoService {

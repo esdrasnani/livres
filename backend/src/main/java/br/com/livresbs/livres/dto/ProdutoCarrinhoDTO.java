@@ -1,10 +1,10 @@
 package br.com.livresbs.livres.dto;
 
-import lombok.Builder;
-import lombok.Data;
-
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+
+import lombok.Builder;
+import lombok.Data;
 
 @Data
 @Builder

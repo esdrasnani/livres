@@ -1,5 +1,15 @@
 package br.com.livresbs.livres.service.impl;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
+
 import br.com.livresbs.livres.config.properties.ApplicationProperty;
 import br.com.livresbs.livres.dto.ProdutoDisponivelDTO;
 import br.com.livresbs.livres.dto.ProdutosDisponiveisDTO;
@@ -8,15 +18,6 @@ import br.com.livresbs.livres.model.EstoqueProdutor;
 import br.com.livresbs.livres.repository.DataEntregaRepository;
 import br.com.livresbs.livres.repository.EstoqueProdutorRepository;
 import br.com.livresbs.livres.service.LojaService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.stereotype.Service;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class LojaServiceImpl implements LojaService {

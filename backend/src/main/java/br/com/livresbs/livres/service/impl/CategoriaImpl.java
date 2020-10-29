@@ -1,15 +1,16 @@
 package br.com.livresbs.livres.service.impl;
 
-import br.com.livresbs.livres.model.*;
-import br.com.livresbs.livres.repository.CategoriaRepository;
-import br.com.livresbs.livres.service.CategoriaService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.util.List;
+import br.com.livresbs.livres.model.CategoriaProduto;
+import br.com.livresbs.livres.repository.CategoriaRepository;
+import br.com.livresbs.livres.service.CategoriaService;
 
 @Service
 public class CategoriaImpl implements CategoriaService {
