@@ -18,6 +18,16 @@ import br.com.livresbs.livres.model.MeioPagamento;
 import br.com.livresbs.livres.repository.CarrinhoRepository;
 import br.com.livresbs.livres.repository.MetodoPagamentoRepository;
 import br.com.livresbs.livres.service.PedidoService;
+<<<<<<< Updated upstream
+=======
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+>>>>>>> Stashed changes
 
 @Service
 public class PedidoServiceImpl implements PedidoService {

@@ -13,6 +13,7 @@ import br.com.livresbs.livres.model.Usuario;
 import br.com.livresbs.livres.repository.UsuarioRepository;
 import br.com.livresbs.livres.service.UsuarioService;
 
+@SuppressWarnings("rawtypes")
 @Service
 public class UsuarioImpl implements UsuarioService {
     @Autowired

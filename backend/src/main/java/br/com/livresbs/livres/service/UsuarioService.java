@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import br.com.livresbs.livres.model.Usuario;
 
+@SuppressWarnings("rawtypes")
 public interface UsuarioService {
 
     ResponseEntity cadastraUsuario(@RequestBody Usuario obj);

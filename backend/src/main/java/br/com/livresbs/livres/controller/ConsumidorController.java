@@ -14,10 +14,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+<<<<<<< Updated upstream
 import br.com.livresbs.livres.dto.ConsumidorDTO;
 import br.com.livresbs.livres.model.Consumidor;
 import br.com.livresbs.livres.service.ConsumidorService;
 
+=======
+import java.util.List;
+@SuppressWarnings("rawtypes")
+>>>>>>> Stashed changes
 @RestController // controlador rest
 @RequestMapping(value = "consumidor") //caminho
 public class ConsumidorController {

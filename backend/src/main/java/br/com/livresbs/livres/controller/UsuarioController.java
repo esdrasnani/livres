@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.livresbs.livres.model.Usuario;
 import br.com.livresbs.livres.service.UsuarioService;
 
+@SuppressWarnings("rawtypes")
 @RestController
 @RequestMapping(value = "usuario")
 public class UsuarioController {

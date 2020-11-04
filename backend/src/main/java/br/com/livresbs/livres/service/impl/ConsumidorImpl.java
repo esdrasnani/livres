@@ -21,6 +21,7 @@ import br.com.livresbs.livres.repository.ConsumidorRepository;
 import br.com.livresbs.livres.repository.PreComunidadeRepository;
 import br.com.livresbs.livres.service.ConsumidorService;
 
+@SuppressWarnings("rawtypes")
 @Service
 public class ConsumidorImpl implements ConsumidorService {
     @Autowired

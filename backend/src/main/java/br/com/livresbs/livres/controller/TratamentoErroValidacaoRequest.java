@@ -17,9 +17,14 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+<<<<<<< Updated upstream
 import br.com.livresbs.livres.config.properties.MessageProperty;
 import br.com.livresbs.livres.dto.ErroCampoRequestDTO;
 import br.com.livresbs.livres.dto.ErroValidacaoRequestDTO;
+=======
+import java.util.LinkedList;
+import java.util.List;
+>>>>>>> Stashed changes
 
 @ControllerAdvice
 public class TratamentoErroValidacaoRequest extends ResponseEntityExceptionHandler {

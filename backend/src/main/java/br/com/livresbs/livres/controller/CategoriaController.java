@@ -1,7 +1,12 @@
 package br.com.livresbs.livres.controller;
 
+<<<<<<< Updated upstream
 import java.util.List;
 
+=======
+import br.com.livresbs.livres.model.CategoriaProduto;
+import br.com.livresbs.livres.service.CategoriaService;
+>>>>>>> Stashed changes
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,8 +18,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+<<<<<<< Updated upstream
 import br.com.livresbs.livres.model.CategoriaProduto;
 import br.com.livresbs.livres.service.CategoriaService;
+=======
+import java.util.List;
+>>>>>>> Stashed changes
 
 @RestController
 @RequestMapping(value = "categoria")

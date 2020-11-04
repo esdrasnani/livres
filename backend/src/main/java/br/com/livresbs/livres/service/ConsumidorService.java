@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import br.com.livresbs.livres.dto.ConsumidorDTO;
 import br.com.livresbs.livres.model.Consumidor;
 
+@SuppressWarnings("rawtypes")
 public interface ConsumidorService {
 	
     List<ConsumidorDTO> listarConsumidor();

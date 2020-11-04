@@ -15,6 +15,7 @@ import br.com.livresbs.livres.repository.ProdutoRepository;
 import br.com.livresbs.livres.repository.ProdutorRepository;
 import br.com.livresbs.livres.service.EstoqueProdutorService;
 
+@SuppressWarnings("rawtypes")
 @Service
 public class EstoqueProdutorImpl implements EstoqueProdutorService{
 
