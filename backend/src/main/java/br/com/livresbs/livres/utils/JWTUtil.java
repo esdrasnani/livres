@@ -2,12 +2,6 @@ package br.com.livresbs.livres.utils;
 
 import java.util.Date;
 
-<<<<<<< Updated upstream
-=======
-import br.com.livresbs.livres.model.TipoPerfil;
-import br.com.livresbs.livres.service.impl.UserDetailsImpl;
-import br.com.livresbs.livres.service.impl.UsuarioImpl;
->>>>>>> Stashed changes
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

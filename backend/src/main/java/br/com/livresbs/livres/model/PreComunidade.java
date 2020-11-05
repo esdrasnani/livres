@@ -1,11 +1,6 @@
 package br.com.livresbs.livres.model;
 
-<<<<<<< Updated upstream
 import java.util.List;
-=======
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import lombok.*;
->>>>>>> Stashed changes
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

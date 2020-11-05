@@ -19,7 +19,7 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-<dependencies>
+	<dependencies>
 
 		<!-- data-jpa -->
 		<dependency>
@@ -60,22 +60,20 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-<<<<<<< Updated upstream
 
 		<!-- swagger2 -->
-=======
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 			<exclusions>
 				<exclusion>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- junit 5 -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -87,8 +85,6 @@
 			<artifactId>junit-vintage-engine</artifactId>
 		</dependency>
 
-		
->>>>>>> Stashed changes
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
@@ -109,14 +105,12 @@
 			<version>20.0</version>
 		</dependency>
 
-
 		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
 			<version>5.2.4.RELEASE</version>
 		</dependency>
-
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
 		<dependency>
@@ -143,10 +137,7 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
-<<<<<<< Updated upstream
 		<!-- h2database -->
-=======
->>>>>>> Stashed changes
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -169,22 +160,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-<<<<<<< Updated upstream
-
-		<!-- junit 5 -->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>test</scope>
-		</dependency>
-=======
->>>>>>> Stashed changes
-
+		
 		<!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
 		<dependency>
 			<groupId>org.springframework.security.oauth</groupId>

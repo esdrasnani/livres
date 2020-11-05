@@ -1,19 +1,12 @@
 package br.com.livresbs.livres.controller;
 
-<<<<<<< Updated upstream
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.livresbs.livres.dto.ErroSistemaDTO;
 import br.com.livresbs.livres.exception.LivresException;
-=======
-import br.com.livresbs.livres.dto.ErroSistemaDTO;
-import br.com.livresbs.livres.exception.LivresException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
->>>>>>> Stashed changes
+
 
 @ControllerAdvice
 public class TratamentoErroSistema {
